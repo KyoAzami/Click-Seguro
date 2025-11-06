@@ -35,10 +35,10 @@ header a {
 
 /* Estilos generales */
 header a::before {
-    content: url('');
+    content: url('../images/image3.png');
     display: inline-block;
-    width: 80px; /* Tamaño del ícono en pantallas grandes */
-    height: 80px;
+    width: 60px; /* Tamaño del ícono en pantallas grandes */
+    height: 60px;
 }
 
 header h1 {
@@ -49,6 +49,16 @@ header h1 {
     color: white;
     /* Tamaño de fuente más razonable, considera ajustarlo con Media Queries */
     font-size: 2.5rem; 
+}
+
+.tittle{
+    text-align: center;
+    font-style: bold;
+}
+
+.sinopsis{
+    font-style: bold;
+    font-size: 1.5rem;
 }
 
 #menu-toggle {
