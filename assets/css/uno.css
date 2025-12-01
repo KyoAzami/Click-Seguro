@@ -1,0 +1,19 @@
+/* Pequeño ajuste local para separar las tarjetas de información */
+.blok {
+    margin-bottom: 30px; /* Separación entre secciones */
+}
+h2 {
+    color: #00ffff; /* Color cian para resaltar títulos */
+    margin-top: 0;
+}
+.highlight {
+    color: #ff6b6b; /* Color para alertas o peligros */
+    font-weight: bold;
+}
+ul {
+    padding-left: 20px;
+}
+li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}

@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../JavaScript/status.js"></script>
     <link rel="stylesheet" href="../css/style.css">
-    <title>Evaluacion</title>
+    <link rel="stylesheet" href="../css/tres.css">
+    <title>Evaluación | Click Seguro</title>
+    <style>
+
+    </style>
 </head>
 <body>
     <header>
@@ -22,20 +26,180 @@
 
     <nav id="side-menu" class="side-menu">
         <ul id="list">
-            <a href="../../index.html">Inicio</a>
-            <a href="./inf2.html">Los engaños en internet</a>
-            <a href="./inf3.html">Tu informacion y su valor</a>
-            <a href="./act.html">Evaluacion didactica</a>
+            <li><a href="../../index.html">Inicio</a></li>
+            <li><a href="./inf2.html">Los engaños en internet</a></li>
+            <li><a href="./inf3.html">Tu información y su valor</a></li>
+            <li><a href="./act.html">Evaluación didáctica</a></li>
         </ul>
     </nav>
 
-    <main id="content">
-        <section class="block">
-
+    <main id="main-content">
+        
+        <section class="blok">
+            <h2 class="tittle">Zona de Entrenamiento</h2>
+            <p class="sinopsis">¿Eres un usuario seguro o una víctima fácil?</p>
+            <p>Responde las siguientes preguntas basadas en lo que has aprendido. Recuerda: en ciberseguridad, un solo error puede ser fatal.</p>
         </section>
+
+        <br>
+        <br>
+
+        <form id="quiz-form">
+            <section class="blok">
+                <div class="question-box">
+                    <p class="question-text">1. Recibes un correo de "Netflix" diciendo que tu pago falló y debes actualizar tus datos urgentemente en un enlace. ¿Qué haces?</p>
+                    <div class="options">
+                        <label>
+                            <input type="radio" name="q1" value="a"> Entro al enlace rápidamente para no perder mi cuenta.
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="b"> Ignoro el enlace y entro manualmente a Netflix.com para verificar mi estado.
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="c"> Respondo al correo preguntando si es verdad.
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <p class="question-text">2. ¿Por qué es peligroso pensar "Yo no tengo nada que ocultar"?</p>
+                    <div class="options">
+                        <label>
+                            <input type="radio" name="q2" value="a"> No es peligroso, es la verdad.
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="b"> Porque los hackers solo atacan a gente millonaria.
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="c"> Porque pueden robar mi identidad y usarla para fraudes o delitos.
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <p class="question-text">3. Tu computadora ha sido infectada con Ransomware y tus archivos están bloqueados. El atacante pide $500 USD. ¿Qué haces?</p>
+                    <div class="options">
+                        <label>
+                            <input type="radio" name="q3" value="a"> Pagar inmediatamente para recuperar mis fotos.
+                        </label>
+                        <label>
+                            <input type="radio" name="q3" value="b"> No pagar, desconectar el equipo de la red y buscar ayuda profesional.
+                        </label>
+                        <label>
+                            <input type="radio" name="q3" value="c"> Reiniciar la computadora varias veces a ver si se arregla.
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <p class="question-text">4. ¿Qué es la Ingeniería Social?</p>
+                    <div class="options">
+                        <label>
+                            <input type="radio" name="q4" value="a"> Un software para diseñar edificios.
+                        </label>
+                        <label>
+                            <input type="radio" name="q4" value="b"> Manipular psicológicamente a las personas para que revelen información confidencial.
+                        </label>
+                        <label>
+                            <input type="radio" name="q4" value="c"> Crear redes sociales falsas.
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <p class="question-text">5. ¿Qué significa "Si el producto es gratis, el producto eres tú"?</p>
+                    <div class="options">
+                        <label>
+                            <input type="radio" name="q5" value="a"> Que la empresa regala cosas por bondad.
+                        </label>
+                        <label>
+                            <input type="radio" name="q5" value="b"> Que la empresa gana dinero vendiendo mis datos y hábitos de consumo.
+                        </label>
+                        <label>
+                            <input type="radio" name="q5" value="c"> Es solo un dicho sin importancia.
+                        </label>
+                    </div>
+                </div>
+
+                <button type="button" class="btn-submit" onclick="verificarRespuestas()">Finalizar Evaluación</button>
+            </section>
+        </form>
+
+        <div id="result-area">
+            <h3 class="tittle">Resultados</h3>
+            <p id="score-display" class="score-text">0 / 5</p>
+            <p id="feedback-msg" style="font-size: 1.2rem;"></p>
+            <button class="btn-submit" style="background-color: #444; color: white; width: auto; margin-top:15px;" onclick="location.reload()">Intentar de nuevo</button>
+        </div>
+
     </main>
 
     <script src="../JavaScript/menu.js"></script>
     <script src="../JavaScript/scroll.js"></script>
+    
+    <script>
+        function verificarRespuestas() {
+            // Respuestas correctas
+            const respuestas = {
+                q1: 'b', // Phishing: ir directo a la web
+                q2: 'c', // Valor de datos: robo de identidad
+                q3: 'b', // Ransomware: no pagar
+                q4: 'b', // Ingeniería social: manipulación
+                q5: 'b'  // Producto eres tú: venta de datos
+            };
+
+            let aciertos = 0;
+            const form = document.getElementById('quiz-form');
+            const resultArea = document.getElementById('result-area');
+            const scoreDisplay = document.getElementById('score-display');
+            const feedbackMsg = document.getElementById('feedback-msg');
+
+            // Verificar cada pregunta
+            for (let pregunta in respuestas) {
+                const opciones = document.getElementsByName(pregunta);
+                let respondido = false;
+                
+                opciones.forEach(opcion => {
+                    const label = opcion.parentElement;
+                    
+                    // Resetear estilos previos
+                    label.classList.remove('correct-answer', 'wrong-answer');
+
+                    if (opcion.checked) {
+                        respondido = true;
+                        if (opcion.value === respuestas[pregunta]) {
+                            aciertos++;
+                            label.classList.add('correct-answer'); // Marcar verde
+                        } else {
+                            label.classList.add('wrong-answer'); // Marcar rojo
+                        }
+                    } else if (opcion.value === respuestas[pregunta]) {
+                        // (Opcional) Mostrar cuál era la correcta si se equivocó
+                        // label.style.border = "1px dashed #00ff00"; 
+                    }
+                });
+            }
+
+            // Mostrar resultados
+            form.style.display = 'none'; // Ocultar el formulario
+            resultArea.style.display = 'block'; // Mostrar resultado
+            scoreDisplay.textContent = `${aciertos} / 5 Aciertos`;
+
+            // Mensaje personalizado según puntaje
+            if (aciertos === 5) {
+                feedbackMsg.innerHTML = "🏆 <strong>¡Excelente!</strong> Tienes mentalidad de ciberseguridad. Eres difícil de hackear.";
+                feedbackMsg.style.color = "#00ff00";
+            } else if (aciertos >= 3) {
+                feedbackMsg.innerHTML = "⚠️ <strong>Bien, pero cuidado.</strong> Tienes los conceptos básicos, pero aún podrías caer en trampas sofisticadas.";
+                feedbackMsg.style.color = "#ffff00";
+            } else {
+                feedbackMsg.innerHTML = "🚨 <strong>Peligro.</strong> Eres una víctima potencial. Te recomiendo leer la información nuevamente.";
+                feedbackMsg.style.color = "#ff4444";
+            }
+            
+            // Scrollear hacia el resultado
+            resultArea.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>

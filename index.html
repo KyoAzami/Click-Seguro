@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./assets/JavaScript/status.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Click Seguro</title>
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <title>Inicio | Click Seguro</title>
 </head>
 <body>
     <header>
@@ -22,32 +23,76 @@
 
     <nav id="side-menu" class="side-menu">
         <ul id="list">
-            <a href="./index.html">Inicio</a>
-            <a href="./assets/src/inf2.html">Los engaños en internet</a>
-            <a href="./assets/src/inf3.html">Tu informacion y su valor</a>
-            <a href="./assets/src/act.html">Evaluacion didactica</a>
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./assets/src/inf2.html">Los engaños en internet</a></li>
+            <li><a href="./assets/src/inf3.html">Tu información y su valor</a></li>
+            <li><a href="./assets/src/act.html">Evaluación didáctica</a></li>
         </ul>
     </nav>
 
     <main id="main-content">
-        <section class="blok">
-            <h2 class="tittle">Bienvenido a click seguro</h2>
-            <p>Internet es una herramienta increíble para trabajar, divertirnos y hablar con amigos. 
-                Pero, al igual que en la vida real, también hay personas con malas intenciones.
-            ¿Alguna vez te ha llegado un mensaje de un "premio" que no recuerdas haber jugado? 
-                ¿O un correo "urgente" de tu banco pidiéndote la contraseña? No estás solo.
-            Este foro es un lugar para compartir esas experiencias, hacer preguntas (¡todas son válidas!) 
-                y aprender a cuidarnos en el mundo digital. Somos una comunidad que se ayuda a reconocer las trampas.</p>
-
-            <h2 class="tittle">Categorias</h2>
-            <ul class="sinopsis">
-                <li><b>Los Engaños más Comunes</b></li>
-                <li><b>El Arte del Engaño (Manipulación)</b></li>
-                <li><b>Lo que Internet "Sabe" de Ti</b></li>
-                <li><b>¡Aprende a Protegerte!</b></li>
-            </ul>
-            
+        
+        <section class="blok hero-section">
+            <h2 class="hero-title">Tu Escudo Digital</h2>
+            <p class="hero-subtitle">
+                Internet es una herramienta increíble, pero está llena de trampas invisibles. 
+                Aprende a identificar las amenazas, protege tu identidad y navega sin miedo.
+            </p>
         </section>
+
+        <div class="grid-container">
+            
+            <a href="./assets/src/inf2.html" class="nav-card">
+                <div>
+                    <span class="card-icon">🎣</span> <span class="card-title">Los Engaños</span>
+                    <p class="card-desc">
+                        Phishing, Ransomware y ofertas falsas. Descubre las tácticas que usan los ciberdelincuentes para engañarte.
+                    </p>
+                </div>
+                <span class="cta-button">Leer más &rarr;</span>
+            </a>
+
+            <a href="./assets/src/inf3.html" class="nav-card">
+                <div>
+                    <span class="card-icon">💎</span>
+                    <span class="card-title">Tus Datos Valen Oro</span>
+                    <p class="card-desc">
+                        ¿Crees que no tienes nada que ocultar? Entiende por qué tu información es el nuevo petróleo del mercado negro.
+                    </p>
+                </div>
+                <span class="cta-button">Leer más &rarr;</span>
+            </a>
+
+            <a href="./assets/src/act.html" class="nav-card">
+                <div>
+                    <span class="card-icon">🧠</span>
+                    <span class="card-title">Ponte a Prueba</span>
+                    <p class="card-desc">
+                        ¿Eres un usuario experto o una víctima fácil? Resuelve el quiz y demuestra tus conocimientos.
+                    </p>
+                </div>
+                <span class="cta-button">Comenzar Test &rarr;</span>
+            </a>
+
+        </div>
+
+        <br>
+        <br>
+
+        <section class="blok" style="margin-top: 30px;">
+            <h2 class="tittle">¿Por qué Click Seguro?</h2>
+            <p>
+                Somos una iniciativa nacida de la necesidad de traducir el lenguaje técnico de la ciberseguridad 
+                a consejos prácticos para el día a día. No necesitas ser un hacker para estar protegido, 
+                solo necesitas <strong>sentido común digital</strong>.
+            </p>
+            <ul style="padding-left: 20px; line-height: 1.8;">
+                <li>🔒 Aprende a configurar tus contraseñas.</li>
+                <li>👁️ Identifica correos maliciosos al instante.</li>
+                <li>🛡️ Protege a tu familia de estafas en redes sociales.</li>
+            </ul>
+        </section>
+
     </main>
 
     <script src="./assets/JavaScript/menu.js"></script>
